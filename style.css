@@ -1,0 +1,392 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background-image: linear-gradient(
+    to right,
+    rgba(52, 55, 57, 1),
+    rgba(26, 26, 28, 1)
+  );
+}
+
+#navbar {
+  width: 100%;
+  background-color: rgba(190, 49, 68, 1);
+  position: fixed;
+}
+
+#navbar ul {
+  display: flex;
+  justify-content: right;
+  list-style-type: none;
+  font-size: 1.5rem;
+  margin-right: 1.5rem;
+}
+
+#navbar li {
+  padding: 1.2rem;
+}
+
+#navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+#welcome-section {
+  background-image: linear-gradient(
+    to right,
+    rgba(52, 55, 57, 1),
+    rgba(26, 26, 28, 1)
+  );
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+}
+
+#welcome-section h1 {
+  color: white;
+  font-size: 4rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+#welcome-section p {
+  color: #be3144;
+  font-size: 2.5rem;
+  font-weight: 200;
+  font-style: italic;
+  margin-top: 0.3rem;
+  text-align: center;
+}
+
+#projects {
+  background-color: rgba(69, 86, 125, 1);
+  text-align: center;
+  padding-bottom: 5rem;
+}
+
+#projects h1 {
+  padding-top: 4rem;
+  padding-bottom: 0.5rem;
+  color: white;
+  font-size: 3rem;
+  border-bottom: 0.2rem solid white;
+  margin: 0 auto;
+  width: 55%;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  margin-top: 4.5rem;
+  grid-gap: 2.5rem;
+  margin-left: 4rem;
+  margin-right: 4rem;
+  margin-bottom: 4rem;
+}
+
+.grid img {
+  width: 100%;
+  height: calc(100% - 5rem);
+  object-fit: cover;
+}
+
+.project-tile p {
+  background-color: rgba(48, 56, 65, 1);
+  padding: 1.5rem 0;
+  font-size: 1.3rem;
+  margin-top: -0.4rem;
+}
+
+.project-tile a {
+  text-decoration: none;
+  color: white;
+}
+
+span {
+  color: rgba(48, 56, 65, 1);
+  transition: 0.3s;
+}
+
+.project-tile:hover span {
+  color: orange;
+  transition: 0.3s;
+}
+
+.show-all {
+  text-decoration: none;
+  color: white;
+  font-size: 1.3rem;
+  background-color: rgba(48, 56, 65, 1);
+  padding: 1rem 2rem;
+  border-radius: 0.2rem;
+  transition: 0.5s;
+}
+
+.show-all:hover {
+  color: #be3144;
+  transition: 0.5s;
+}
+
+#contact {
+  background-image: linear-gradient(
+    to right,
+    rgba(52, 55, 57, 1),
+    rgba(26, 26, 28, 1)
+  );
+  color: white;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Raleway", sans-serif;
+}
+
+#contact h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 0.9rem;
+  text-align: center;
+}
+
+#contact p {
+  font-size: 1.5rem;
+  font-weight: 200;
+}
+
+.links a {
+  color: white;
+  text-decoration: none;
+  padding: 0 2rem;
+  font-size: 1.5rem;
+  transition: 0.5s;
+}
+
+.links {
+  margin-top: 3rem;
+}
+
+.links a:hover {
+  color: rgba(190, 49, 68, 1);
+  transition: 0.5s;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 0.5rem;
+  height: 10vh;
+  background-image: linear-gradient(
+    to right,
+    rgba(52, 55, 57, 1),
+    rgba(26, 26, 28, 1)
+  );
+  color: white;
+  border-top: 0.3rem solid #be3144;
+  font-size: 1.13rem;
+  padding: 1rem 1rem 0 1rem;
+}
+
+@media only screen and (max-width: 1217px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 4.5rem;
+    grid-gap: 2.5rem;
+    margin-left: 4rem;
+    margin-right: 4rem;
+    margin-bottom: 4rem;
+  }
+
+  .links {
+    display: flex;
+  }
+
+  #projects h1 {
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    border-bottom: 0.2rem solid white;
+    margin: 0 auto;
+  }
+}
+
+@media only screen and (max-width: 955px) {
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    margin-top: 4.5rem;
+    grid-gap: 2.5rem;
+    margin-bottom: 4rem;
+  }
+
+  .project-tile {
+    width: 100%;
+    height: 100%;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin: 1rem 0;
+  }
+
+  .links a {
+    padding: 1.5rem 0;
+  }
+
+  footer {
+    margin: 0;
+    padding: 1rem 0;
+    gap: 0.5rem;
+    height: 0%;
+  }
+
+  #contact {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    padding-top: 1rem;
+  }
+
+  #contact h1 {
+    font-size: 2.5rem;
+  }
+
+  #projects h1 {
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    border-bottom: 0.2rem solid white;
+    margin: 0 auto;
+  }
+
+  #contact p {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 700px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    margin-top: 1rem;
+  }
+
+  .links a {
+    padding: 0.8rem 0;
+  }
+
+  footer {
+    margin: 0;
+    padding: 1rem 0;
+    gap: 0.5rem;
+    height: 0%;
+  }
+
+  #contact {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    padding-top: 1rem;
+  }
+
+  #contact h1 {
+    font-size: 2.5rem;
+  }
+
+  #projects h1 {
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    border-bottom: 0.2rem solid white;
+    margin: 0 auto;
+  }
+
+  #contact p {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  footer {
+    margin: 0;
+    padding: 1rem 0;
+    gap: 0.5rem;
+    height: 0%;
+  }
+
+  #contact {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    padding-top: 1rem;
+  }
+
+  #contact h1 {
+    font-size: 2.5rem;
+  }
+
+  #projects h1 {
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    border-bottom: 0.2rem solid white;
+    margin: 0 auto;
+  }
+
+  #contact p {
+    text-align: center;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  footer {
+    margin: 0;
+    padding: 1rem 0;
+    gap: 0.5rem;
+    height: 0%;
+  }
+
+  #contact {
+    margin: 0;
+    padding: 0;
+    height: auto;
+    padding-top: 1rem;
+  }
+
+  #contact h1 {
+    font-size: 2.5rem;
+  }
+
+  #projects h1 {
+    width: 80%;
+    padding-top: 1rem;
+    padding-bottom: 0;
+    border-bottom: 0.2rem solid white;
+    margin: 0 auto;
+  }
+
+  #contact p {
+    text-align: center;
+  }
+}
